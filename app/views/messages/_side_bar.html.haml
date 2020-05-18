@@ -2,11 +2,11 @@
   .user-name 
     .top-items
       .name
-        takumi
+        = current_user.name
       .icons
         =link_to do
           =fa_icon 'edit', class: 'edit-icon'
-        =link_to do
+        =link_to edit_user_path(current_user) do
           =fa_icon 'cog', class: 'cog-icon'
   .group-list
     .box
