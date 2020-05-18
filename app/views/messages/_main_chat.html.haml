@@ -1,0 +1,34 @@
+.main-chat
+  .group-info
+    .left-box
+      .group-name
+        test
+      .group-menber
+        tetsuya
+    =link_to '#', class: 'edit-btn' do
+      Edit
+  .massage-list
+    .info
+      .massage
+        .talker
+          takumi
+        .date
+          2020/05/17(Sun) 18:09:06
+      .text
+        test
+    .info
+      .massage
+        .talker
+          takumi
+        .date
+          2020/05/17(Sun) 18:09:06
+      .text
+        test
+  .form
+    %form
+      %input.form__message
+      .form__box
+        %label.form__box__image
+          = icon('fa','image',class: 'icon')
+          %input.hidden{type: 'file'}
+      %input.form__submit{type: 'submit', value: 'Send'}
