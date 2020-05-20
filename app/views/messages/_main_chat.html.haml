@@ -2,33 +2,20 @@
   .group-info
     .left-box
       .group-name
-        test
+        = @group.name
       .group-menber
-        tetsuya
-    =link_to '#', class: 'edit-btn' do
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
+    =link_to 'edit', class: 'edit-btn' do
       Edit
   .massage-list
     .info
-      .massage
-        .talker
-          takumi
-        .date
-          2020/05/17(Sun) 18:09:06
-      .text
-        test
-    .info
-      .massage
-        .talker
-          takumi
-        .date
-          2020/05/17(Sun) 18:09:06
-      .text
-        test
+      =render @messages
   .form
-    %form
-      %input.form__message
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .form__box
-        %label.form__box__image
+        =f.label :image, 'form__box__image' do
           = icon('fa','image',class: 'icon')
-          %input.hidden{type: 'file'}
-      %input.form__submit{type: 'submit', value: 'Send'}
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

@@ -11,11 +11,11 @@
   .group-list
     - current_user.groups.each do |group|
       .box
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group-name
             = group.name
           .group-message
-            テストメッセージ
+            = group.show_last_message
 
 
     
