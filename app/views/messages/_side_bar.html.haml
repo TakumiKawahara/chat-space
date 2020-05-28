@@ -4,10 +4,10 @@
       .name
         = current_user.name
       .icons
-        =link_to new_group_path do
+        =link_to new_group_path, class:'edit-icon' do
           = icon("fa","edit")
           -# =fa_icon 'edit', class: 'edit-icon'
-        =link_to edit_user_path(current_user) do
+        =link_to edit_user_path(current_user), class:'cog-icon' do
           = icon("fa","cog")
           -# =fa_icon 'cog', class: 'cog-icon'
   .group-list
