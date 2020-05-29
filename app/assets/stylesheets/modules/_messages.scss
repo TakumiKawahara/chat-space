@@ -56,15 +56,17 @@ $light_blue: #38AEF0;
     padding: 20px 20px 0;
     .box {
       margin-bottom: 40px;
-      text-decoration: none;
-      .group-name {
-        font-size: 15px;
-        color: $white;
-      }
-      .group-message {
-        font-size: 11px;
-        margin-top: 5px;
-        color: $white;
+      .box-link {
+        text-decoration: none;
+        .group-name {
+          font-size: 15px;
+          color: $white;
+        }
+        .group-message {
+          font-size: 11px;
+          margin-top: 5px;
+          color: $white;
+        }
       }
     }
   }

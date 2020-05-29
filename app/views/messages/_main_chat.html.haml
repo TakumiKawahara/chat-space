@@ -4,6 +4,7 @@
       .group-name
         = @group.name
       .group-menber
+        Member:
         - @group.group_users.each do |group_user|
           = group_user.user.name
     =link_to 'edit', class: 'edit-btn' do
